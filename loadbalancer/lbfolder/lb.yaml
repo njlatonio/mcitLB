@@ -2,4 +2,4 @@ loadbalancerconfiguration:
   - publicipname: newpublicip
     allocation_method: Static
   - publicipname: mcitip
-    allocation_method: Static
+    allocation_method: Dynamic
