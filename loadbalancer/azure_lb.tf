@@ -1,5 +1,5 @@
 locals{
-  loadbalancerconfig=[for f in fileset("${path.module}/lbfolder", "[^_]*.yaml") : yamldecode(file("${path.module}/lbfolder/${f}"))]
+  loadbalancerconfig=[for f in fileset("${path.module}/${var.folder}", "[^_]*.yaml") : yamldecode(file("${path.module}/${var.folder}/${f}"))]
   loadbalancerlist = flatten([
     for app in local.loadbalancerconfig : [
       for loadbalancer in try(app.loadbalancerconfiguration, []) :{
