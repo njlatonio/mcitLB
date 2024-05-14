@@ -20,3 +20,8 @@ variable"loadbalancer_location"{
   type=string
   default="West Europe"
 }
+
+variable "folder"{
+  type=string
+  default="lbfolder"
+}
