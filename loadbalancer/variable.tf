@@ -11,3 +11,12 @@ variable "client_secret"{
 variable "tenant_id"{
   type=string
 }
+
+variable"loadbalancer_name"{
+  type=string
+  default="LoadBalancerRG"
+}
+variable"loadbalancer_location"{
+  type=string
+  default="West Europe"
+}
