@@ -11,8 +11,8 @@ locals{
 ])
 }
 resource "azurerm_resource_group" "loadbalancerrg" {
-  name     = "LoadBalancerRG" #Need to pass as variable
-  location = "West Europe" #Need to pass as variable
+  name     = var.loadbalancer_name
+  location = var.loadbalancer_location
 }
 
 resource "azurerm_public_ip" "azurepublicipexample" {
